@@ -9,10 +9,13 @@ import Home from './pages/home/Home'
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Watch from './pages/watch/Watch';
+import { useContext } from 'react';
+import {AuthContext} from './context/authContext/AuthContex'
+
 
 function App() {
 
-  const user = true;
+  const {user} = useContext(AuthContext)
 
   return (
     <Router>
@@ -26,7 +29,7 @@ function App() {
         <Route path="/login">{!user ? <Login /> : <Redirect to="/" />}</Route>
         {user && (
           <>
-            <Route path="/movies">
+          <Route path="/movies">
               <Home type="movie" />
             </Route>
             <Route path="/series">

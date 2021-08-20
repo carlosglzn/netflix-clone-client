@@ -4,11 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './mysass.scss'
+import { AuthContextProvider } from './context/authContext/AuthContex'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <AuthContextProvider>
+      <App />
+    </AuthContextProvider>,
   document.getElementById('root')
 );
 
