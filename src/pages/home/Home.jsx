@@ -22,8 +22,9 @@ const Home = ({type}) => {
                         genre ? "&genre=" + genre : ""
                       }`,
                       {
-                          headers: {
-                              token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWU2NGY1YzcxMzU2YTU2YWM1ZTgwYyIsImlhdCI6MTYyOTM4NjI2NCwiZXhwIjoxNjI5NjQ1NDY0fQ.OKKaucVvsSyXH4ecyZGkq2_R-EEi-PXWG8_oFjKP4YU"
+                        headers: {
+                            token:
+                            "Bearer "+JSON.parse(localStorage.getItem("user")).accessToken,
                           },
                       }
                 )
