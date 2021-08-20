@@ -48,7 +48,7 @@ export default function Register() {
         <h1>Unlimited movies, TV shows, and more.</h1>
         <h2>Watch anywhere!</h2>
         <p>
-          Ready to watch? Enter your email, username and Password
+          Ready to watch? Enter your Email, Username and Password
         </p>
         {!email ? (
           <div className="input">
